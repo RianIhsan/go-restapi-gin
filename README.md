@@ -1,6 +1,6 @@
 # SIMPLE Golang REST API
 ### Stack
-> Go
-> Gin
-> Gorm
-> MySql
+> Go <br />
+> Gin <br />
+> Gorm <br />
+> MySql <br />
