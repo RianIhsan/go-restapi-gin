@@ -7,10 +7,10 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getTodos();
+    getProducts();
   }, []);
 
-  const getTodos = async () => {
+  const getProducts = async () => {
     try {
       const response = await axios.get("http://localhost:8080/api/products/");
       console.log(response.data.products);
@@ -20,10 +20,10 @@ const Home = () => {
     }
   };
 
-  const deleteTodo = async (id) => {
+  const deleteProducts = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/api/products/${id}`);
-      getTodos();
+      getProducts();
     } catch (error) {
       console.log(error);
     }
@@ -38,10 +38,10 @@ const Home = () => {
           className="w-[20vw] md:w-[13vw] lg:w-[10vw] xl:w-[7vw] 2xl:w-[7vw]"
         />
         <h1 className="font-bold text-[2rem] mt-[3vh] font-Merriweather md:text-[1.7rem]">
-          Gudang{" "}
+          Gudang
           <span className="text-[1rem] md:text-[1.3rem] text-slate-500">
             powered backend by
-          </span>{" "}
+          </span>
           <span className="text-[text3rem] md:text-[2.2rem] text-blue-500">
             Go
           </span>
@@ -81,7 +81,7 @@ const Home = () => {
                   </Link>
                   <button
                     className="bg-red-500 hover:bg-red-700 px-2 py-1 text-white"
-                    onClick={() => deleteTodo(todo.id)}
+                    onClick={() => deleteProducts(todo.id)}
                   >
                     Delete
                   </button>

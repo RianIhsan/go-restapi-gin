@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import AddTodo from "./pages/AddTodo";
-import EditTodo from "./pages/EditTodo";
+import AddProduct from "./pages/AddProduct";
+import EditProduct from "./pages/EditProduct";
 
 export default function App() {
   return (
@@ -9,8 +9,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/add" element={<AddTodo />} />
-          <Route path="/edit/:id" element={<EditTodo />} />
+          <Route path="/add" element={<AddProduct />} />
+          <Route path="/edit/:id" element={<EditProduct />} />
         </Routes>
       </BrowserRouter>
     </div>
