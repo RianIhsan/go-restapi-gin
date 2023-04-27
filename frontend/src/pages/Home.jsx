@@ -58,30 +58,30 @@ const Home = () => {
             </Link>
           </div>
           <div className="flex flex-col items-center overflow-y-auto h-[30vh] gap-5">
-            {products.map((todo) => (
+            {products.map((products) => (
               <div
-                key={todo.id}
+                key={products.id}
                 className="flex flex-wrap items-center justify-between px-3 py-2 hover:border-slate-500 hover:border  w-11/12 border border-white"
               >
                 <p className="flex-1">
                   <span className="font-bold">name : </span>
-                  {todo.nama_product}
+                  {products.nama_product}
                 </p>
                 <p className="flex-1">
                   <span className="font-bold">deskripsi : </span>{" "}
-                  {todo.deskripsi}
+                  {products.deskripsi}
                 </p>
                 <div>
                   <Link
-                    to={`edit/${todo.id}`}
+                    to={`edit/${products.id}`}
                     className="bg-blue-500 hover:bg-blue-700 px-2 py-1 text-white mr-2"
-                    onClick={() => handleEditTodo(todo.id)}
+                    onClick={() => handleEditTodo(products.id)}
                   >
                     Edit
                   </Link>
                   <button
                     className="bg-red-500 hover:bg-red-700 px-2 py-1 text-white"
-                    onClick={() => deleteTodo(todo.id)}
+                    onClick={() => deleteTodo(products.id)}
                   >
                     Delete
                   </button>
